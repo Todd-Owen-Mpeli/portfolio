@@ -23,8 +23,8 @@ export const pageType: IPageTypes = {
 
 export const flexibleContentType: IFlexibleContentType = {
 	// Public pages
-	pages: "DefaultTemplate_Flexiblecontent_ContentBuilder",
+	pages: "DefaultTemplate_Flexiblecontent_FlexibleContent",
 	// Preview pages
-	previewPage: "Page_Flexiblecontent_ContentBuilder",
-	previewPost: "Post_Flexiblecontent_ContentBuilder",
+	previewPage: "Page_Flexiblecontent_FlexibleContent",
+	previewPost: "Post_Flexiblecontent_FlexibleContent",
 };
