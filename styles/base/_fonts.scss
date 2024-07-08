@@ -10,12 +10,12 @@
 }
 
 @font-face {
-	font-family: TelkaRegular;
-	src: url("../fonts/TelkaRegular.woff");
+	font-family: FormulaCondensedBold;
+	src: url("../fonts/FormulaCondensed-Bold.woff");
 }
 
 // Font Stack Properties
-$main: "TelkaRegular", "PlusJakartaSans";
+$main: "FormulaCondensedBold", "PlusJakartaSans";
 $body: "PlusJakartaSans", "Inter";
 
 .font-TelkaRegular {

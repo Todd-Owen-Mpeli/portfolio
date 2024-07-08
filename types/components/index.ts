@@ -10,6 +10,7 @@ export type ITitleParagraph = {
 };
 export type IMaskCursorEffectDescription = {
 	paragraph: string;
+	hiddenParagraph: string;
 };
 
 // Global

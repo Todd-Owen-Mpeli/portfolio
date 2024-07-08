@@ -23,6 +23,7 @@ export const getAllFlexibleContentComponents = async (
 												fieldGroupName
 												displaySection
 												paragraph
+												hiddenParagraph
 											}
 											... on ${postTypeFlexibleContent}_TitleParagraph {
 												fieldGroupName

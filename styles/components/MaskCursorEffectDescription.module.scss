@@ -1,0 +1,35 @@
+@import "../base/fonts";
+@import "../base/colors";
+
+.main {
+	@apply h-screen bg-white flex items-center justify-center;
+
+	.mask,
+	.body {
+		@apply cursor-default h-full w-full flex items-center justify-center;
+
+		p {
+			@apply max-w-7xl w-full p-[40px] text-[40px] 2xl:text-[64px] text-black leading-[3.5rem] 2xl:leading-[5.5rem] text-left;
+			font-family: $main;
+
+			span {
+				@apply text-primary-default;
+			}
+		}
+	}
+
+	.mask {
+		mask-image: url("../../public/svg/square-sharp-mask.svg");
+		mask-repeat: no-repeat;
+		mask-size: 40px;
+		@apply absolute bg-black;
+
+		p {
+			@apply text-white;
+
+			span {
+				@apply text-secondary-default underline;
+			}
+		}
+	}
+}
