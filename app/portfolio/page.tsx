@@ -1,18 +1,19 @@
 // Imports
 import {NextPage, Metadata} from "next";
-import {pageType, postType, flexibleContentType} from "@/context/pages";
+import {flexibleContentType, pageType, postType} from "@/context/pages";
 
 // Queries Functions
 import {getAllSeoContent} from "@/graphql/GetAllSeoContent";
 import {getAllFlexibleContentComponents} from "@/graphql/GetAllFlexibleContentComponents";
 
 // Components
+import BackToTopButton from "@/components/Elements/BackToTopButton";
 import PageContextProvider from "@/context/providers/PageContextProvider";
 import RenderFlexibleContent from "@/components/FlexibleContent/RenderFlexibleContent";
 
-// Home Page Generated Metadata
+// Dynamic Pages Generated Metadata
 export const generateMetadata = async (): Promise<Metadata> => {
-	const seo: any = await getAllSeoContent(pageType?.home, postType?.pages);
+	const seo: any = await getAllSeoContent(pageType?.portfolio, postType?.pages);
 
 	return {
 		title: seo?.title,
@@ -20,22 +21,25 @@ export const generateMetadata = async (): Promise<Metadata> => {
 	};
 };
 
-const HomePage: NextPage = async () => {
+const PortfolioPage: NextPage = async () => {
 	// Fetch priority content
 	const flexibleContentComponents: any = await getAllFlexibleContentComponents(
-		pageType?.home,
+		pageType?.portfolio,
 		postType?.pages,
 		flexibleContentType?.pages
 	);
 
 	return (
-		<PageContextProvider
-			content={flexibleContentComponents?.content}
-			postTypeFlexibleContent={flexibleContentType?.pages}
-		>
-			<RenderFlexibleContent />
-		</PageContextProvider>
+		<>
+			<PageContextProvider
+				content={flexibleContentComponents?.content}
+				postTypeFlexibleContent={flexibleContentType?.pages}
+			>
+				<BackToTopButton link={`#`} />
+				<RenderFlexibleContent />
+			</PageContextProvider>
+		</>
 	);
 };
 
-export default HomePage;
+export default PortfolioPage;
