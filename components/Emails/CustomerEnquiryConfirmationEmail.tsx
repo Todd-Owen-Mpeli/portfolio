@@ -26,7 +26,6 @@ export const CustomerEnquiryConfirmationEmail: React.FC<
 	updatedDate,
 	phoneNumber,
 	imagesDirUrl,
-	selectedPrograms,
 	themesOptionsContent,
 }) => {
 	const formattedDate = new Intl.DateTimeFormat("en", {
@@ -48,10 +47,9 @@ export const CustomerEnquiryConfirmationEmail: React.FC<
 							<Text style={introParagraph}>Hi {firstName},</Text>
 							<Text style={paragraph}>
 								Thank you for reaching out to CRDB Bank Foundation regarding{" "}
-								{subject} and our &quot;{selectedPrograms}&quot; programs. We
-								have received your website inquiry on {formattedDate} and are
-								eager to assist you with your goals. At this moment there is no
-								further action is required from you.
+								{subject}. We have received your website inquiry on{" "}
+								{formattedDate} and are eager to assist you with your goals. At
+								this moment there is no further action is required from you.
 							</Text>
 							<Text style={paragraph}>
 								Our team is currently reviewing the details you provided, and we
@@ -70,18 +68,10 @@ export const CustomerEnquiryConfirmationEmail: React.FC<
 								>
 									{themesOptionsContent?.phoneNumber}
 								</Link>
-								{themesOptionsContent?.phoneNumberTwo ? " or " : " "}
-								<Link
-									href={`tel:${themesOptionsContent?.phoneNumberTwo}`}
-									style={link}
-								>
-									{themesOptionsContent?.phoneNumberTwo}
-								</Link>
 							</Text>
 							<Text style={paragraph}>
-								Thank you once again for considering CRDB Bank Foundation for
-								your {selectedPrograms} needs. We are looking forward to working
-								with you.
+								Thank you once again for considering . We are looking forward to
+								working with you.
 							</Text>
 							<Text style={paragraph}>Best regards,</Text>
 							<Text style={paragraph}>
@@ -99,13 +89,6 @@ export const CustomerEnquiryConfirmationEmail: React.FC<
 								>
 									{themesOptionsContent?.phoneNumber}
 								</Link>{" "}
-								{themesOptionsContent?.phoneNumberTwo ? " or " : " "}
-								<Link
-									href={`tel:${themesOptionsContent?.phoneNumberTwo}`}
-									style={link}
-								>
-									{themesOptionsContent?.phoneNumberTwo}
-								</Link>
 								<br />
 								Email:{" "}
 								<Link
@@ -114,17 +97,10 @@ export const CustomerEnquiryConfirmationEmail: React.FC<
 								>
 									{themesOptionsContent?.email}
 								</Link>
-								{themesOptionsContent?.emailTwo ? " or " : " "}
-								<Link
-									href={`mailto:${themesOptionsContent?.emailTwo}`}
-									style={link}
-								>
-									{themesOptionsContent?.emailTwo}
-								</Link>
 								<br />
 								Website:{" "}
-								<Link style={link} href={`https://crdbbankfoundation.co.tz`}>
-									crdbbankfoundation.co.tz
+								<Link style={link} href={`https://toddowenmpeli.com`}>
+									toddowenmpeli.com
 								</Link>
 							</Text>
 						</Section>

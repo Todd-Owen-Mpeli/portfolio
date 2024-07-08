@@ -27,7 +27,6 @@ export const BusinessCustomerEnquiryConfirmationEmail: React.FC<
 	updatedDate,
 	phoneNumber,
 	imagesDirUrl,
-	selectedPrograms,
 	themesOptionsContent,
 }) => {
 	const formattedDate = new Intl.DateTimeFormat("en", {
@@ -38,7 +37,7 @@ export const BusinessCustomerEnquiryConfirmationEmail: React.FC<
 	return (
 		<Html>
 			<Head />
-			<Preview>New Website Inquiry: {`${selectedPrograms}`}</Preview>
+			<Preview>New Website Inquiry: </Preview>
 			<Body style={main}>
 				<Container style={container}>
 					<EmailHeader
@@ -48,9 +47,8 @@ export const BusinessCustomerEnquiryConfirmationEmail: React.FC<
 						<Text style={introParagraph}>Hello Team,</Text>
 						<Text style={paragraph}>
 							We&apos;ve just received a new inquiry through our website&apos;s
-							regarding &quot;{subject}&quot; and our {selectedPrograms}{" "}
-							programs. The customer as contacted us on {formattedDate} their
-							details are below.
+							regarding &quot;{subject}&quot; The customer as contacted us on{" "}
+							{formattedDate} their details are below.
 						</Text>
 						<Text style={detailsParagraph}>Inquiry Details:</Text>
 						<Text style={paragraph}>
@@ -67,8 +65,6 @@ export const BusinessCustomerEnquiryConfirmationEmail: React.FC<
 							<Link href={`tel:${phoneNumber}`} style={link}>
 								{phoneNumber}
 							</Link>
-							<br />
-							<strong>Programs Inquired:</strong> {selectedPrograms}
 						</Text>
 						<Text style={paragraph}>
 							<strong>Subject:</strong> {subject}

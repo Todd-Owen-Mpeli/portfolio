@@ -58,12 +58,6 @@ const FormikForm: FC = () => {
 			errors.phoneNumber = "Please inform us about the topic.";
 		}
 
-		if (!values?.selectedPrograms) {
-			errors.selectedPrograms = "Required*";
-		} else if (values?.selectedPrograms.length <= 0) {
-			errors.selectedPrograms = "Please inform us about the topic.";
-		}
-
 		if (!values?.subject) {
 			errors.subject = "Required*";
 		} else if (values?.subject.length <= 0) {
@@ -98,7 +92,6 @@ const FormikForm: FC = () => {
 			lastName: "",
 			email: "",
 			phoneNumber: "",
-			selectedPrograms: "",
 			subject: "",
 			message: "",
 		},
@@ -327,46 +320,6 @@ const FormikForm: FC = () => {
 						initial={initial}
 						whileInView={fadeInUp}
 						viewport={{once: true}}
-						className="w-full"
-					>
-						{formik?.touched?.selectedPrograms &&
-						formik?.errors?.selectedPrograms ? (
-							<div>
-								<p className="py-1 text-left text-tiny text-red-default ">
-									{formik?.errors?.selectedPrograms}
-								</p>
-							</div>
-						) : null}
-						<Field
-							as="select"
-							id="selectedPrograms"
-							name="selectedPrograms"
-							placeholder="Pick a Service"
-							onBlur={formik?.handleBlur}
-							onChange={formik?.handleChange}
-							value={formik?.values?.selectedPrograms}
-							className="px-4 py-3 w-full text-darkGrey placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-green-darker focus:border-green-darker focus:ring-[1px] focus:ring-green-darker"
-						>
-							{globalContext?.ourProgramsLinks?.length > 0 ? (
-								globalContext?.ourProgramsLinks?.map(
-									(item: any, index: number) => (
-										<Fragment key={index}>
-											<option value={item?.node?.label}>
-												{item?.node?.label}
-											</option>
-										</Fragment>
-									)
-								)
-							) : (
-								<></>
-							)}
-							<option value="Other">Other</option>
-						</Field>
-					</motion.div>
-					<motion.div
-						initial={initial}
-						whileInView={fadeInUp}
-						viewport={{once: true}}
 					>
 						{formik?.touched?.message && formik?.errors?.message ? (
 							<div>
@@ -406,7 +359,6 @@ const FormikForm: FC = () => {
 							!formik?.values?.lastName ||
 							!formik?.values?.email ||
 							!formik?.values?.phoneNumber ||
-							!formik?.values?.selectedPrograms ||
 							!formik?.values?.subject ||
 							!formik?.values?.message ||
 							reCaptchaResult === null ||

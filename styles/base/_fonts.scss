@@ -1,27 +1,27 @@
 /*===== FONTS =====*/
-// @font-face {
-// 	font-family: Inter;
-// 	src: url("../fonts/Inter.woff");
-// }
+@font-face {
+	font-family: Inter;
+	src: url("../fonts/Inter.woff");
+}
 
-// @font-face {
-// 	font-family: PlusJakartaSans;
-// 	src: url("../fonts/PlusJakartaSans.woff");
-// }
+@font-face {
+	font-family: PlusJakartaSans;
+	src: url("../fonts/PlusJakartaSans.woff");
+}
 
-// @font-face {
-// 	font-family: Kanit;
-// 	src: url("../fonts/Kanit-Regular.woff");
-// }
+@font-face {
+	font-family: TelkaRegular;
+	src: url("../fonts/TelkaRegular.woff");
+}
 
-// // Font Stack Properties
-// $main: "Kanit";
-// $body: "PlusJakartaSans", "Inter";
+// Font Stack Properties
+$main: "TelkaRegular", "PlusJakartaSans";
+$body: "PlusJakartaSans", "Inter";
 
-// .font-Kanit {
-// 	font-family: $main;
-// }
+.font-TelkaRegular {
+	font-family: $main;
+}
 
-// .font-PlusJakartaSans {
-// 	font-family: $body;
-// }
+.font-PlusJakartaSans {
+	font-family: $body;
+}

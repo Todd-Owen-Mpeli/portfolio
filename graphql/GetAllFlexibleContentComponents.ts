@@ -18,39 +18,7 @@ export const getAllFlexibleContentComponents = async (
 							template {
 								... on DefaultTemplate {
 									flexibleContent {
-										flexibleContent {
-											... on ${postTypeFlexibleContent}_Hero {
-												fieldGroupName
-												displaySection
-												title
-												paragraph
-												buttonLink {
-													url
-													title
-													target
-												}
-												buttonLinkTwo {
-													url
-													title
-													target
-												}
-												image {
-													altText
-													sourceUrl
-													mediaDetails {
-														height
-														width
-													}
-												}
-												backgroundImage {
-													altText
-													sourceUrl
-													mediaDetails {
-														height
-														width
-													}
-												}
-											}
+										contentBuilder {
 											... on ${postTypeFlexibleContent}_TitleParagraph {
 												fieldGroupName
 												displaySection

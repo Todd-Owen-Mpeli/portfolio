@@ -40,51 +40,6 @@ const EmailFooter: React.FC<IEmailFooter.IEmailFooter> = ({
 							padding: "0px 8px",
 						}}
 					>
-						<Link href={themesOptionsContent?.facebookLink?.url} style={link}>
-							<Img
-								width="100%"
-								height="35px"
-								style={{width: "35px", height: "35px"}}
-								src={`${imagesDirUrl}/2024/02/facebook-round-white.png`}
-							/>
-						</Link>
-					</Column>
-					<Column
-						style={{
-							width: "25%",
-							padding: "0px 8px",
-						}}
-					>
-						<Link href={themesOptionsContent?.instagramLink?.url} style={link}>
-							<Img
-								width="100%"
-								height="35px"
-								style={{width: "35px", height: "35px"}}
-								src={`${imagesDirUrl}/2024/02/instagram-round-white.png`}
-							/>
-						</Link>
-					</Column>
-					<Column
-						style={{
-							width: "25%",
-							padding: "0px 8px",
-						}}
-					>
-						<Link href={themesOptionsContent?.twitterLink?.url} style={link}>
-							<Img
-								width="100%"
-								height="35px"
-								style={{width: "35px", height: "35px"}}
-								src={`${imagesDirUrl}/2024/02/twitter-round-white.png`}
-							/>
-						</Link>
-					</Column>
-					<Column
-						style={{
-							width: "25%",
-							padding: "0px 8px",
-						}}
-					>
 						<Link href={themesOptionsContent?.linkedinLink?.url} style={link}>
 							<Img
 								width="100%"

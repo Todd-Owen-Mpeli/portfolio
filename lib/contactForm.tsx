@@ -16,8 +16,7 @@ export const sendContactForm = async (data: any) => {
 		!data?.subject ||
 		!data?.lastName ||
 		!data?.firstName ||
-		!data?.phoneNumber ||
-		!data?.selectedPrograms
+		!data?.phoneNumber
 	) {
 		console.log(`Error`);
 	}
@@ -39,7 +38,6 @@ export const sendContactForm = async (data: any) => {
 				phoneNumber={data?.phoneNumber}
 				firstName={`${data?.firstName}`}
 				themesOptionsContent={themesOptionsContent}
-				selectedPrograms={`${data?.selectedPrograms}`}
 			/>
 		);
 
@@ -55,7 +53,6 @@ export const sendContactForm = async (data: any) => {
 				phoneNumber={data?.phoneNumber}
 				firstName={`${data?.firstName}`}
 				themesOptionsContent={themesOptionsContent}
-				selectedPrograms={`${data?.selectedPrograms}`}
 			/>
 		);
 

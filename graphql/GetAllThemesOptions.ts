@@ -22,7 +22,7 @@ export const getThemesOptionsContent = async () => {
 									title
 									target
 								}
-								instagramLink {
+								linkedinLink {
 									url
 									title
 									target

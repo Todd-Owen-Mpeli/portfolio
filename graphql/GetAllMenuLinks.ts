@@ -36,10 +36,7 @@ export const getMobileLinks = async () => {
 	try {
 		const content: any = gql`
 			{
-				mobileLinks: menuItems(
-					where: {location: MOBILE_NAVIGATION}
-					first: 10
-				) {
+				mobileLinks: menuItems(where: {location: MOBILE_LINKS}, first: 10) {
 					edges {
 						node {
 							id
