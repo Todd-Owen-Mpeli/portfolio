@@ -19,6 +19,11 @@ export const getAllFlexibleContentComponents = async (
 								... on DefaultTemplate {
 									flexibleContent {
 										contentBuilder {
+											... on ${postTypeFlexibleContent}_MaskCursorEffectDescription {
+												fieldGroupName
+												displaySection
+												paragraph
+											}
 											... on ${postTypeFlexibleContent}_TitleParagraph {
 												fieldGroupName
 												displaySection

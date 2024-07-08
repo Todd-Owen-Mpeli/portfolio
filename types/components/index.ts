@@ -8,6 +8,9 @@ export type ITitleParagraph = {
 	paragraph: string;
 	displayParagraph: boolean;
 };
+export type IMaskCursorEffectDescription = {
+	paragraph: string;
+};
 
 // Global
 
