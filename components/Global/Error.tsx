@@ -47,6 +47,7 @@ const Error: FC = () => {
 						</div>
 						<div className="max-w-xl mx-auto">
 							<Paragraph
+								fadeIn={false}
 								content={
 									globalContext?.themesOptionsContent?.errorPageContent
 										?.paragraph

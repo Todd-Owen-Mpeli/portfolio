@@ -1,12 +1,34 @@
 @import "../base/fonts";
 @import "../base/colors";
 
+.paragraph {
+	display: flex;
+	font-size: 60px;
+	line-height: 1;
+	padding: 40px;
+	max-width: 1280px;
+	color: black;
+	flex-wrap: wrap;
+
+	.word {
+		position: relative;
+		margin-right: 12px;
+		margin-top: 12px;
+
+		.shadow {
+			position: absolute;
+			opacity: 20%;
+		}
+	}
+}
+
 .main {
-	@apply h-screen bg-white flex items-center justify-center;
+	cursor: url("/public/img/arrow-cursor-pointer.png"), auto !important;
+	@apply h-screen bg-white flex items-center justify-center relative;
 
 	.mask,
 	.body {
-		@apply cursor-default h-full w-full flex items-center justify-center;
+		@apply cursor-default h-full w-full flex items-center justify-center absolute;
 
 		p {
 			@apply max-w-7xl w-full p-[40px] text-[40px] 2xl:text-[64px] text-black leading-[3.5rem] 2xl:leading-[5.5rem] text-left;
@@ -22,7 +44,7 @@
 		mask-image: url("../../public/svg/square-sharp-mask.svg");
 		mask-repeat: no-repeat;
 		mask-size: 40px;
-		@apply absolute bg-black;
+		@apply bg-primary-default;
 
 		p {
 			@apply text-white;

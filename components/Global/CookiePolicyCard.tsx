@@ -48,6 +48,7 @@ const CookiePolicyCard: FC = () => {
 						Cookie Policy
 					</motion.h3>
 					<Paragraph
+						fadeIn={false}
 						content={`<p>This website uses cookies to enhance the user experience and ensure the proper functioning of the site. By using this website, you agree to the use of cookies in accordance with this <a href="/cookie-policy">Cookie Policy</a>.</p>`}
 						tailwindStyling="mt-1 mb-2 text-sm text-left text-black"
 					/>

@@ -33,6 +33,7 @@ const TitleParagraph: FC<ITitleParagraph> = ({
 					{title}
 				</motion.h2>
 				<Paragraph
+					fadeIn={false}
 					content={paragraph}
 					tailwindStyling={
 						paragraph

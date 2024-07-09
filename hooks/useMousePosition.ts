@@ -1,16 +1,35 @@
-import {useState, useEffect} from "react";
+// Imports
+import {useState, useEffect, useRef} from "react";
 
 const useMousePosition = () => {
-	const [mousePosition, setMousePosition] = useState({x: null, y: null});
+	const [mousePosition, setMousePosition] = useState<{
+		x: number | null;
+		y: number | null;
+	}>({x: null, y: null});
+	const requestRef = useRef<number | null>(null);
 
-	const updateMousePosition = (element: any) => {
-		setMousePosition({x: element?.clientX, y: element?.clientY});
+	const updateMousePosition = (event: MouseEvent) => {
+		setMousePosition({x: event.clientX, y: event.clientY});
+		requestRef.current = null;
+	};
+
+	const handleMouseMove = (event: MouseEvent) => {
+		if (!requestRef.current) {
+			requestRef.current = requestAnimationFrame(() =>
+				updateMousePosition(event)
+			);
+		}
 	};
 
 	useEffect(() => {
-		window.addEventListener("mousemove", updateMousePosition);
+		window.addEventListener("mousemove", handleMouseMove);
 
-		return () => window.removeEventListener("mousemove", updateMousePosition);
+		return () => {
+			window.removeEventListener("mousemove", handleMouseMove);
+			if (requestRef.current) {
+				cancelAnimationFrame(requestRef.current);
+			}
+		};
 	}, []);
 
 	return mousePosition;

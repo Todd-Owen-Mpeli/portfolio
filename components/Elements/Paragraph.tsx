@@ -1,14 +1,20 @@
 // Imports
-import {FC} from "react";
-import {motion} from "framer-motion";
+import {FC, useRef} from "react";
 import DOMPurify from "isomorphic-dompurify";
+import {motion, useScroll} from "framer-motion";
 import {IParagraph} from "@/types/components/index";
-import {fadeIn, initialTwo} from "@/animations/animations";
 
 // Styling
 import styles from "@/styles/components/Elements/Paragraph.module.scss";
 
-const Paragraph: FC<IParagraph> = ({content, tailwindStyling}) => {
+const Paragraph: FC<IParagraph> = ({fadeIn, content, tailwindStyling}) => {
+	const container = useRef(null);
+
+	const {scrollYProgress} = useScroll({
+		target: container,
+		offset: ["start 0.7", "start 0.15"],
+	});
+
 	/* Sanitize the WYSIWYG paragraph content */
 	function createParagraphMarkup(paragraphContent: string) {
 		return {
@@ -18,9 +24,8 @@ const Paragraph: FC<IParagraph> = ({content, tailwindStyling}) => {
 
 	return (
 		<motion.div
-			initial={initialTwo}
-			whileInView={fadeIn}
-			viewport={{once: true}}
+			ref={container}
+			style={{opacity: fadeIn ? scrollYProgress : 1}}
 			className={
 				content ? styles.paragraph + ` block ${tailwindStyling}` : `hidden`
 			}

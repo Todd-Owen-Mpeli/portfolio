@@ -23,6 +23,7 @@ export type ITitle = {
 	tailwindStyling: string;
 };
 export type IParagraph = {
+	fadeIn: boolean;
 	content: string;
 	tailwindStyling: string;
 };

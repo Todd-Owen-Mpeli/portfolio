@@ -2,9 +2,7 @@
 
 // Imports
 import {FC, useState} from "react";
-import {motion} from "framer-motion";
 import useMousePosition from "@/hooks/useMousePosition";
-import {fadeInUp, initial} from "@/animations/animations";
 import {IMaskCursorEffectDescription} from "@/types/components";
 
 // Styling
@@ -18,52 +16,47 @@ const MaskCursorEffectDescription: FC<IMaskCursorEffectDescription> = ({
 	hiddenParagraph,
 }) => {
 	const [isHovered, setIsHovered] = useState(false);
-	const {x, y} = useMousePosition();
 
 	// Mask Circle size
-	const size = isHovered ? 600 : 60;
+	const size = isHovered ? 600 : 0;
+	const mousePosition = useMousePosition();
 
-	console.log(`${x ? x : 1 - size / 2}px ${y ? y : 1 - size / 2}px`);
+	const maskStyle = {
+		WebkitMaskSize: `${size}px`,
+		maskPosition: `${mousePosition.x}px ${mousePosition.y}px`,
+		WebkitMaskPosition: `${
+			mousePosition.x ? mousePosition.x - 300 : mousePosition.x
+		}px ${mousePosition.y ? mousePosition.y - 300 : mousePosition.y}px`,
+	};
 
 	return (
-		<motion.div
-			initial={initial}
-			whileInView={fadeInUp}
-			viewport={{once: true}}
-			className={styles.main}
-		>
-			<motion.div
-				className={styles.mask}
-				animate={{
-					WebkitMaskPosition: `${x ? x - 300 : 1 - size / 2}px ${
-						y ? y - 350 : 1 - size / 2
-					}px`,
-
-					WebkitMaskSize: `${size}px`,
-				}}
-				transition={{type: "tween", ease: "backOut", duration: 0.5}}
-			>
+		<>
+			<div className={styles.main}>
+				<Paragraph
+					fadeIn={true}
+					content={paragraph}
+					tailwindStyling={paragraph ? `${styles.body} block` : "hidden"}
+				/>
 				<div
+					className={styles.mask}
+					style={maskStyle}
 					onMouseEnter={() => {
 						setIsHovered(true);
 					}}
 					onMouseLeave={() => {
 						setIsHovered(false);
 					}}
-					className="flex items-center justify-center"
 				>
 					<Paragraph
+						fadeIn={true}
 						content={hiddenParagraph}
-						tailwindStyling={hiddenParagraph ? `block` : "hidden"}
+						tailwindStyling={
+							hiddenParagraph ? `${styles.body} block` : "hidden"
+						}
 					/>
 				</div>
-			</motion.div>
-
-			<Paragraph
-				content={paragraph}
-				tailwindStyling={paragraph ? `${styles.body} block` : "hidden"}
-			/>
-		</motion.div>
+			</div>
+		</>
 	);
 };
 
