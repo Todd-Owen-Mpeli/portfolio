@@ -10,7 +10,16 @@ export type ITitleParagraph = {
 };
 export type IMaskCursorEffectDescription = {
 	paragraph: string;
+	displayAnimation: boolean;
 	hiddenParagraph: string;
+	hiddenBackgroundImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			height: number;
+			width: number;
+		};
+	};
 };
 
 // Global

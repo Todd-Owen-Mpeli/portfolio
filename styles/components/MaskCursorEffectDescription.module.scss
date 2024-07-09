@@ -23,7 +23,6 @@
 }
 
 .main {
-	cursor: url("/public/img/arrow-cursor-pointer.png"), auto !important;
 	@apply h-screen bg-white flex items-center justify-center relative;
 
 	.mask,
@@ -44,7 +43,7 @@
 		mask-image: url("../../public/svg/square-sharp-mask.svg");
 		mask-repeat: no-repeat;
 		mask-size: 40px;
-		@apply bg-primary-default;
+		@apply bg-primary-default bg-cover bg-no-repeat bg-center;
 
 		p {
 			@apply text-white;

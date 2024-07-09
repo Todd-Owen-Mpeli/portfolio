@@ -13,7 +13,9 @@ import Paragraph from "@/components/Elements/Paragraph";
 
 const MaskCursorEffectDescription: FC<IMaskCursorEffectDescription> = ({
 	paragraph,
+	displayAnimation,
 	hiddenParagraph,
+	hiddenBackgroundImage,
 }) => {
 	const [isHovered, setIsHovered] = useState(false);
 
@@ -23,6 +25,10 @@ const MaskCursorEffectDescription: FC<IMaskCursorEffectDescription> = ({
 
 	const maskStyle = {
 		WebkitMaskSize: `${size}px`,
+		backgroundImage: `linear-gradient(
+				0deg,rgba(0, 0, 0, 0.25),
+				rgba(0, 0, 0, 0.25)),
+				url(${hiddenBackgroundImage?.sourceUrl})`,
 		maskPosition: `${mousePosition.x}px ${mousePosition.y}px`,
 		WebkitMaskPosition: `${
 			mousePosition.x ? mousePosition.x - 300 : mousePosition.x
@@ -33,9 +39,9 @@ const MaskCursorEffectDescription: FC<IMaskCursorEffectDescription> = ({
 		<>
 			<div className={styles.main}>
 				<Paragraph
-					fadeIn={true}
+					fadeIn={displayAnimation}
 					content={paragraph}
-					tailwindStyling={paragraph ? `${styles.body} block` : "hidden"}
+					tailwindStyling={paragraph ? styles.body : "hidden"}
 				/>
 				<div
 					className={styles.mask}
@@ -48,11 +54,9 @@ const MaskCursorEffectDescription: FC<IMaskCursorEffectDescription> = ({
 					}}
 				>
 					<Paragraph
-						fadeIn={true}
+						fadeIn={displayAnimation}
 						content={hiddenParagraph}
-						tailwindStyling={
-							hiddenParagraph ? `${styles.body} block` : "hidden"
-						}
+						tailwindStyling={hiddenParagraph ? styles.body : "hidden"}
 					/>
 				</div>
 			</div>

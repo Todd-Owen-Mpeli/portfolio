@@ -24,6 +24,15 @@ export const getAllFlexibleContentComponents = async (
 												displaySection
 												paragraph
 												hiddenParagraph
+												displayAnimation
+												hiddenBackgroundImage {
+													altText
+													sourceUrl
+													mediaDetails {
+														height
+														width
+													}
+												}
 											}
 											... on ${postTypeFlexibleContent}_TitleParagraph {
 												fieldGroupName
