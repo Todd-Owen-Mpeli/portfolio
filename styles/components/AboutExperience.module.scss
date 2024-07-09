@@ -1,0 +1,16 @@
+@import "../base/fonts";
+@import "../base/colors";
+
+.sticky {
+	.el {
+		@apply absolute top-0 w-full h-full flex items-center justify-center;
+
+		.imageContainer {
+			@apply relative w-[25vw] h-[25vh];
+
+			img {
+				@apply object-cover object-center;
+			}
+		}
+	}
+}

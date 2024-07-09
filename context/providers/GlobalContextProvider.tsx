@@ -4,6 +4,7 @@
 import {FC} from "react";
 import {motion} from "framer-motion";
 import {GlobalContext} from "@/context/global";
+import {ReactLenis, useLenis} from "lenis/react";
 import {IGlobalContextProvider} from "@/types/context";
 
 // Components
@@ -28,6 +29,7 @@ const GlobalContextProvider: FC<IGlobalContextProvider> = ({
 		>
 			{/* Cookie Policy Pop Up */}
 			{/* <PostHogContextProvider /> */}
+			{/* <ReactLenis root> */}
 			<motion.div
 				exit={{
 					opacity: 0,
@@ -37,6 +39,7 @@ const GlobalContextProvider: FC<IGlobalContextProvider> = ({
 			>
 				{children}
 			</motion.div>
+			{/* </ReactLenis> */}
 			{/* Vercel Analytics */}
 			<Analytics />
 			{/* Vercel Speed Insights */}

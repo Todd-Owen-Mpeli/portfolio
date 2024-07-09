@@ -8,6 +8,19 @@ export type ITitleParagraph = {
 	paragraph: string;
 	displayParagraph: boolean;
 };
+export type IAboutExperience = {
+	heroTitle: string;
+	paragraph: string;
+	displayAnimation: boolean;
+	heroImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			height: number;
+			width: number;
+		};
+	};
+};
 export type IMaskCursorEffectDescription = {
 	paragraph: string;
 	displayAnimation: boolean;

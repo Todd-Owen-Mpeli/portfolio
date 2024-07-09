@@ -6,6 +6,7 @@ import {usePageContext} from "@/context/providers/PageContextProvider";
 
 // Components
 import TitleParagraph from "@/components/TitleParagraph";
+import AboutExperience from "@/components/AboutExperience";
 import MaskCursorEffectDescription from "@/components/MaskCursorEffectDescription";
 
 const RenderFlexibleContent: FC = () => {
@@ -15,6 +16,7 @@ const RenderFlexibleContent: FC = () => {
 	// Components Key Value Pairs
 	const componentMap: any = {
 		[`${FlexibleContent}_TitleParagraph`]: TitleParagraph,
+		[`${FlexibleContent}_AboutExperience`]: AboutExperience,
 		[`${FlexibleContent}_MaskCursorEffectDescription`]:
 			MaskCursorEffectDescription,
 	};

@@ -19,6 +19,21 @@ export const getAllFlexibleContentComponents = async (
 								... on DefaultTemplate {
 									flexibleContent {
 										flexibleContent {
+											... on ${postTypeFlexibleContent}_AboutExperience {
+												fieldGroupName
+												displaySection
+												paragraph
+												heroTitle
+												displayAnimation
+												heroImage {
+													altText
+													sourceUrl
+													mediaDetails {
+														height
+														width
+													}
+												}
+											}
 											... on ${postTypeFlexibleContent}_MaskCursorEffectDescription {
 												fieldGroupName
 												displaySection
