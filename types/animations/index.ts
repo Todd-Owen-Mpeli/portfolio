@@ -6,12 +6,10 @@ export type Initial = {
 	y: number;
 	opacity: number;
 };
-
 export type InitialTwo = {
 	y: number;
 	opacity: number;
 };
-
 export type FadeIn = {
 	opacity: number;
 	transition: {
@@ -20,7 +18,6 @@ export type FadeIn = {
 		ease: string;
 	};
 };
-
 export type FadeInTwo = {
 	y: number;
 	opacity: number;
@@ -30,7 +27,6 @@ export type FadeInTwo = {
 		ease: string;
 	};
 };
-
 export type FadeInUp = {
 	y: number;
 	opacity: number;
@@ -40,7 +36,6 @@ export type FadeInUp = {
 		ease: string;
 	};
 };
-
 export type Stagger = {
 	initial: {
 		opacity: number;
@@ -56,7 +51,6 @@ export type Stagger = {
 		};
 	};
 };
-
 export type ArrayLoopStaggerChildren = {
 	initial: {
 		opacity: number;
@@ -72,19 +66,16 @@ export type ArrayLoopStaggerChildren = {
 		};
 	};
 };
-
 export type SlideInRightInitial = {
 	y: number;
 	x: number;
 	opacity: number;
 };
-
 export type SlideInLeftInitial = {
 	y: number;
 	x: number;
 	opacity: number;
 };
-
 export type SlideInRightFinish = {
 	x: number;
 	y: 0;
@@ -94,5 +85,34 @@ export type SlideInRightFinish = {
 		duration: number;
 		ease: string;
 		staggerChildren: number;
+	};
+};
+
+// Footer Animation
+export type ITransforms = {
+	x: number;
+	y: number;
+	rotationZ: number;
+}[];
+export type IDisperse = {
+	open: (i: any) => {
+		x: string;
+		y: string;
+		rotateZ: number;
+		transition: {
+			duration: number;
+			ease: number[];
+		};
+		zIndex: number;
+	};
+	closed: {
+		x: number;
+		y: number;
+		rotateZ: number;
+		transition: {
+			duration: number;
+			ease: number[];
+		};
+		zIndex: number;
 	};
 };

@@ -2,5 +2,37 @@
 @import "../base/fonts";
 @import "../base/colors";
 
-.footer {
+footer {
+	.main {
+		@apply w-[75vw] mx-auto p-0;
+
+		.introLine {
+			@apply flex text-[8vw] justify-between uppercase text-white;
+
+			p {
+				@apply m-0;
+			}
+
+			span {
+				@apply text-[8vw] uppercase text-white;
+			}
+		}
+
+		.introLine .introLine:nth-of-type(5),
+		.introLine:nth-of-type(6) {
+			@apply inline-flex;
+		}
+
+		.introLine:nth-of-type(6) {
+			@apply right-[-40px] relative;
+		}
+
+		.introLineHover {
+			@extend .introLine;
+
+			span:hover {
+				@apply text-primary-default;
+			}
+		}
+	}
 }

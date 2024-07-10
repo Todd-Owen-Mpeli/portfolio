@@ -12,12 +12,25 @@ export const getThemesOptionsContent = async () => {
 					edges {
 						node {
 							themeOptions {
-								email
 								address
 								textarea
-								phoneNumber
+								email {
+									target
+									title
+									url
+								}
+								phoneNumber {
+									target
+									title
+									url
+								}
 								copyrightText
 								resumeDownload {
+									url
+									title
+									target
+								}
+								phoneNumber {
 									url
 									title
 									target

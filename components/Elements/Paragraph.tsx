@@ -12,7 +12,7 @@ const Paragraph: FC<IParagraph> = ({fadeIn, content, tailwindStyling}) => {
 
 	const {scrollYProgress} = useScroll({
 		target: container,
-		offset: ["start 0.7", "start 0.15"],
+		offset: ["start 0.6", "start 0.15"],
 	});
 
 	/* Sanitize the WYSIWYG paragraph content */

@@ -37,6 +37,7 @@ const MaskCursorEffectDescription: FC<IMaskCursorEffectDescription> = ({
 
 	return (
 		<>
+			<div className="h-screen"></div>
 			<div className={styles.main}>
 				<Paragraph
 					fadeIn={displayAnimation}

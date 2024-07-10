@@ -63,10 +63,10 @@ export const CustomerEnquiryConfirmationEmail: React.FC<
 								information you&apos;d like to share, please feel free to reply
 								to this email or give us a call at{" "}
 								<Link
-									href={`tel:${themesOptionsContent?.phoneNumber}`}
+									href={`tel:${themesOptionsContent?.phoneNumber?.url}`}
 									style={link}
 								>
-									{themesOptionsContent?.phoneNumber}
+									{themesOptionsContent?.phoneNumber?.url}
 								</Link>
 							</Text>
 							<Text style={paragraph}>
@@ -84,18 +84,18 @@ export const CustomerEnquiryConfirmationEmail: React.FC<
 							<Text style={paragraph}>
 								Tel:{" "}
 								<Link
-									href={`tel:${themesOptionsContent?.phoneNumber}`}
+									href={`tel:${themesOptionsContent?.phoneNumber?.url}`}
 									style={link}
 								>
-									{themesOptionsContent?.phoneNumber}
+									{themesOptionsContent?.phoneNumber?.url}
 								</Link>{" "}
 								<br />
 								Email:{" "}
 								<Link
-									href={`mailto:${themesOptionsContent?.email}`}
+									href={`mailto:${themesOptionsContent?.email?.url}`}
 									style={link}
 								>
-									{themesOptionsContent?.email}
+									{themesOptionsContent?.email?.url}
 								</Link>
 								<br />
 								Website:{" "}

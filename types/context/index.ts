@@ -52,11 +52,19 @@ export type ITestimonials = [
 	}
 ];
 export type IThemesOptionsContent = {
-	email: string;
 	address: string;
 	textarea: string;
-	phoneNumber: string;
 	copyrightText: string;
+	email: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	phoneNumber: {
+		url: string;
+		title: string;
+		target: string;
+	};
 	linkedinLink: {
 		url: string;
 		title: string;
