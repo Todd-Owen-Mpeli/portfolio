@@ -137,7 +137,7 @@ const Footer: FC = () => {
 								}`}
 								className="text-secondary-default hover:text-white text-sm text-center lg:text-left tracking-widest uppercase transition-all ease-in-out duration-500"
 							>
-								{globalContext?.themesOptionsContent?.resumeDownload?.title}
+								→{globalContext?.themesOptionsContent?.resumeDownload?.title}
 							</Link>
 						</motion.li>
 						{globalContext?.copyrightLinks?.length > 0 ? (

@@ -1,7 +1,8 @@
 "use client";
 
 // Imports
-import {FC, useState} from "react";
+import {useScroll} from "framer-motion";
+import {FC, useRef, useState} from "react";
 import useMousePosition from "@/hooks/useMousePosition";
 import {IMaskCursorEffectDescription} from "@/types/components";
 
@@ -9,6 +10,8 @@ import {IMaskCursorEffectDescription} from "@/types/components";
 import styles from "@/styles/components/MaskCursorEffectDescription.module.scss";
 
 // Components
+import Section1 from "@/components/Section1";
+import Section2 from "@/components/Section2";
 import Paragraph from "@/components/Elements/Paragraph";
 
 const MaskCursorEffectDescription: FC<IMaskCursorEffectDescription> = ({
@@ -35,9 +38,20 @@ const MaskCursorEffectDescription: FC<IMaskCursorEffectDescription> = ({
 		}px ${mousePosition.y ? mousePosition.y - 300 : mousePosition.y}px`,
 	};
 
+	const container: any = useRef();
+
+	const {scrollYProgress} = useScroll({
+		target: container,
+
+		offset: ["start start", "end end"],
+	});
+
 	return (
 		<>
-			<div className="h-screen"></div>
+			<div ref={container} className="relative h-[200vh]">
+				<Section1 scrollYProgress={scrollYProgress} />
+				<Section2 scrollYProgress={scrollYProgress} />
+			</div>
 			<div className={styles.main}>
 				<Paragraph
 					fadeIn={displayAnimation}

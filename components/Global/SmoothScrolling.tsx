@@ -6,11 +6,17 @@ import {FC, useEffect} from "react";
 import {ISmoothScrolling} from "@/types/components";
 
 const SmoothScrolling: FC<ISmoothScrolling> = ({children}) => {
-	return (
-		// <ReactLenis root>
-		<main>{children}</main>
-		// </ReactLenis>
-	);
+	useEffect(() => {
+		const lenis = new Lenis();
+		function raf(time: number) {
+			lenis.raf(time);
+
+			requestAnimationFrame(raf);
+		}
+		requestAnimationFrame(raf);
+	}, []);
+
+	return <main>{children}</main>;
 };
 
 export default SmoothScrolling;
