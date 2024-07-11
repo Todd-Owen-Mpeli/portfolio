@@ -15,7 +15,16 @@ const Section1 = ({image, scrollYProgress}: any) => {
 			<div className="flex gap-4">
 				<p>Section</p>
 				<div className="relative w-[12.5vw]">
-					<Image src={image?.sourceUrl} alt="img" fill />
+					<Image
+						alt={image?.altText}
+						src={image?.sourceUrl}
+						width={
+							image?.mediaDetails?.width ? image?.mediaDetails?.width : 500
+						}
+						height={
+							image?.mediaDetails?.height ? image?.mediaDetails?.height : 500
+						}
+					/>
 				</div>
 				<p>Transition</p>
 			</div>

@@ -34,7 +34,7 @@ const AboutExperience: FC<IAboutExperience> = ({
 								fadeIn={displayAnimation}
 								tailwindStyling={
 									paragraph
-										? "text-black text-center lg:text-left text-4xl lg:text-6xl font-PlusJakartaSans"
+										? "overflow-hidden text-black text-left text-4xl lg:text-6xl leading-tight font-PlusJakartaSans"
 										: "hidden"
 								}
 							/>
@@ -45,7 +45,7 @@ const AboutExperience: FC<IAboutExperience> = ({
 								fadeIn={displayAnimation}
 								tailwindStyling={
 									paragraphTwo
-										? "text-black text-center lg:text-left text-lg max-w-sm font-PlusJakartaSans"
+										? "text-black text-left text-lg max-w-sm font-PlusJakartaSans"
 										: "hidden"
 								}
 							/>

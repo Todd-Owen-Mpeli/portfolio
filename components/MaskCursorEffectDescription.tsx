@@ -20,6 +20,7 @@ const MaskCursorEffectDescription: FC<IMaskCursorEffectDescription> = ({
 	hiddenParagraph,
 	hiddenBackgroundImage,
 }) => {
+	const container: any = useRef();
 	const [isHovered, setIsHovered] = useState(false);
 
 	// Mask Circle size
@@ -38,11 +39,8 @@ const MaskCursorEffectDescription: FC<IMaskCursorEffectDescription> = ({
 		}px ${mousePosition.y ? mousePosition.y - 300 : mousePosition.y}px`,
 	};
 
-	const container: any = useRef();
-
 	const {scrollYProgress} = useScroll({
 		target: container,
-
 		offset: ["start start", "end end"],
 	});
 
@@ -60,8 +58,8 @@ const MaskCursorEffectDescription: FC<IMaskCursorEffectDescription> = ({
 			</div>
 			<div className={styles.main}>
 				<Paragraph
-					fadeIn={displayAnimation}
 					content={paragraph}
+					fadeIn={displayAnimation}
 					tailwindStyling={paragraph ? styles.body : "hidden"}
 				/>
 				<div

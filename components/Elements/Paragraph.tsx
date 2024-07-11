@@ -16,11 +16,11 @@ const Paragraph: FC<IParagraph> = ({fadeIn, content, tailwindStyling}) => {
 	});
 
 	/* Sanitize the WYSIWYG paragraph content */
-	function createParagraphMarkup(paragraphContent: string) {
+	const createParagraphMarkup = (paragraphContent: string) => {
 		return {
 			__html: DOMPurify.sanitize(paragraphContent),
 		};
-	}
+	};
 
 	return (
 		<motion.div

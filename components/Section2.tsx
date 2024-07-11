@@ -8,7 +8,12 @@ const Section2 = ({image, scrollYProgress}: any) => {
 
 	return (
 		<motion.div style={{scale, rotate}} className="relative h-screen">
-			<Image src={image?.sourceUrl} alt="img" fill />
+			<Image
+				alt={image?.altText}
+				src={image?.sourceUrl}
+				width={image?.mediaDetails?.width ? image?.mediaDetails?.width : 500}
+				height={image?.mediaDetails?.height ? image?.mediaDetails?.height : 500}
+			/>
 		</motion.div>
 	);
 };
