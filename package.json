@@ -23,6 +23,7 @@
 		"gsap": "^3.12.5",
 		"html-react-parser": "^5.1.10",
 		"isomorphic-dompurify": "^2.13.0",
+		"lenis": "^1.1.6",
 		"lodash": "^4.17.21",
 		"next": "14.2.4",
 		"nodemailer": "^6.9.14",

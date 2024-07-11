@@ -70,6 +70,11 @@ export type IThemesOptionsContent = {
 		title: string;
 		target: string;
 	};
+	githubLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
 	resumeDownload: {
 		url: string;
 		title: string;

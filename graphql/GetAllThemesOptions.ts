@@ -40,6 +40,11 @@ export const getThemesOptionsContent = async () => {
 									title
 									target
 								}
+								githubLink {
+									url
+									title
+									target
+								}
 								errorPageContent {
 									displaySection
 									title
