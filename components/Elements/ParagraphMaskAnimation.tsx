@@ -7,7 +7,11 @@ import {IParagraph} from "@/types/components/index";
 // Styling
 import styles from "@/styles/components/Elements/Paragraph.module.scss";
 
-const Paragraph: FC<IParagraph> = ({fadeIn, content, tailwindStyling}) => {
+const ParagraphMaskAnimation: FC<IParagraph> = ({
+	fadeIn,
+	content,
+	tailwindStyling,
+}) => {
 	const container = useRef(null);
 
 	const {scrollYProgress} = useScroll({
@@ -34,4 +38,4 @@ const Paragraph: FC<IParagraph> = ({fadeIn, content, tailwindStyling}) => {
 	);
 };
 
-export default Paragraph;
+export default ParagraphMaskAnimation;

@@ -22,8 +22,9 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_AboutExperience {
 												fieldGroupName
 												displaySection
-												paragraph
 												heroTitle
+												paragraph
+												paragraphTwo
 												displayAnimation
 												heroImage {
 													altText

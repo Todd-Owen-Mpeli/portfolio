@@ -11,6 +11,7 @@ export type ITitleParagraph = {
 export type IAboutExperience = {
 	heroTitle: string;
 	paragraph: string;
+	paragraphTwo: string;
 	displayAnimation: boolean;
 	heroImage: {
 		altText: string;

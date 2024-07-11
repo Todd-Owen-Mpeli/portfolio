@@ -49,8 +49,14 @@ const MaskCursorEffectDescription: FC<IMaskCursorEffectDescription> = ({
 	return (
 		<>
 			<div ref={container} className="relative h-[200vh]">
-				<Section1 scrollYProgress={scrollYProgress} />
-				<Section2 scrollYProgress={scrollYProgress} />
+				<Section1
+					image={hiddenBackgroundImage}
+					scrollYProgress={scrollYProgress}
+				/>
+				<Section2
+					image={hiddenBackgroundImage}
+					scrollYProgress={scrollYProgress}
+				/>
 			</div>
 			<div className={styles.main}>
 				<Paragraph
