@@ -7,6 +7,8 @@ import {
 	stagger,
 	initialTwo,
 	arrayLoopStaggerChildren,
+	offsetStart,
+	offsetFinish,
 } from "@/animations/animations";
 import Link from "next/link";
 import {FC, Fragment} from "react";
@@ -77,6 +79,8 @@ const Footer: FC = () => {
 					>
 						<Paragraph
 							fadeIn={false}
+							offsetStart={offsetStart}
+							offsetFinish={offsetFinish}
 							content={globalContext?.themesOptionsContent?.copyrightText}
 							tailwindStyling="max-w-lg mx-auto lg:mx-0 text-black hover:text-darkGrey text-sm text-center lg:text-left tracking-wide uppercase transition-all ease-in-out duration-500"
 						/>

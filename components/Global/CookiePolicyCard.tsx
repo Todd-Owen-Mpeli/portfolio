@@ -1,11 +1,17 @@
 "use client";
 
 // Imports
+import {
+	initial,
+	stagger,
+	fadeInUp,
+	offsetFinish,
+	offsetStart,
+} from "@/animations/animations";
 import postHog from "posthog-js";
 import {FC, useState} from "react";
 import {motion} from "framer-motion";
 import Paragraph from "@/components/Elements/Paragraph";
-import {fadeInUp, initial, stagger} from "@/animations/animations";
 
 const CookiePolicyCard: FC = () => {
 	const [showCookiePolicyCard, setShowCookiePolicyCard] = useState(true);
@@ -49,8 +55,10 @@ const CookiePolicyCard: FC = () => {
 					</motion.h3>
 					<Paragraph
 						fadeIn={false}
-						content={`<p>This website uses cookies to enhance the user experience and ensure the proper functioning of the site. By using this website, you agree to the use of cookies in accordance with this <a href="/cookie-policy">Cookie Policy</a>.</p>`}
+						offsetStart={offsetStart}
+						offsetFinish={offsetFinish}
 						tailwindStyling="mt-1 mb-2 text-sm text-left text-black"
+						content={`<p>This website uses cookies to enhance the user experience and ensure the proper functioning of the site. By using this website, you agree to the use of cookies in accordance with this <a href="/cookie-policy">Cookie Policy</a>.</p>`}
 					/>
 					<motion.div
 						initial={initial}

@@ -7,6 +7,8 @@ import {
 	stagger,
 	fadeInUp,
 	initialTwo,
+	offsetStart,
+	offsetFinish,
 } from "@/animations/animations";
 import {FC} from "react";
 import Link from "next/link";
@@ -48,6 +50,8 @@ const Error: FC = () => {
 						<div className="max-w-xl mx-auto">
 							<Paragraph
 								fadeIn={false}
+								offsetStart={offsetStart}
+								offsetFinish={offsetFinish}
 								content={
 									globalContext?.themesOptionsContent?.errorPageContent
 										?.paragraph

@@ -7,12 +7,18 @@ import {IParagraph} from "@/types/components/index";
 // Styling
 import styles from "@/styles/components/Elements/Paragraph.module.scss";
 
-const Paragraph: FC<IParagraph> = ({fadeIn, content, tailwindStyling}) => {
+const Paragraph: FC<IParagraph> = ({
+	fadeIn,
+	content,
+	offsetStart,
+	offsetFinish,
+	tailwindStyling,
+}) => {
 	const container = useRef(null);
 
 	const {scrollYProgress} = useScroll({
 		target: container,
-		offset: ["start 0.9", "start 0.5"],
+		offset: [`start ${offsetStart}`, `start ${offsetFinish}`],
 	});
 
 	/* Sanitize the WYSIWYG paragraph content */

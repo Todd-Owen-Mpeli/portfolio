@@ -1,8 +1,13 @@
 // Imports
+import {
+	initial,
+	fadeInUp,
+	offsetStart,
+	offsetFinish,
+} from "@/animations/animations";
 import {FC} from "react";
 import {motion} from "framer-motion";
 import {ITitleParagraph} from "@/types/components";
-import {fadeInUp, initial} from "@/animations/animations";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
@@ -35,6 +40,8 @@ const TitleParagraph: FC<ITitleParagraph> = ({
 				<Paragraph
 					fadeIn={false}
 					content={paragraph}
+					offsetStart={offsetStart}
+					offsetFinish={offsetFinish}
 					tailwindStyling={
 						paragraph
 							? `lg:max-w-6xl mx-auto mb-10 text-black leading-[1.75rem] text-paragraph text-center ${

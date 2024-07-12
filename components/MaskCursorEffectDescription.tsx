@@ -1,8 +1,7 @@
 "use client";
 
 // Imports
-import {useScroll} from "framer-motion";
-import {FC, useRef, useState} from "react";
+import {FC, useState} from "react";
 import useMousePosition from "@/hooks/useMousePosition";
 import {IMaskCursorEffectDescription} from "@/types/components";
 
@@ -10,8 +9,6 @@ import {IMaskCursorEffectDescription} from "@/types/components";
 import styles from "@/styles/components/MaskCursorEffectDescription.module.scss";
 
 // Components
-import Section1 from "@/components/Section1";
-import Section2 from "@/components/Section2";
 import Paragraph from "@/components/Elements/Paragraph";
 
 const MaskCursorEffectDescription: FC<IMaskCursorEffectDescription> = ({
@@ -20,7 +17,6 @@ const MaskCursorEffectDescription: FC<IMaskCursorEffectDescription> = ({
 	hiddenParagraph,
 	hiddenBackgroundImage,
 }) => {
-	const container: any = useRef();
 	const [isHovered, setIsHovered] = useState(false);
 
 	// Mask Circle size
@@ -39,32 +35,19 @@ const MaskCursorEffectDescription: FC<IMaskCursorEffectDescription> = ({
 		}px ${mousePosition.y ? mousePosition.y - 300 : mousePosition.y}px`,
 	};
 
-	const {scrollYProgress} = useScroll({
-		target: container,
-		offset: ["start start", "end end"],
-	});
-
 	return (
 		<>
-			<div ref={container} className="relative h-[200vh]">
-				<Section1
-					image={hiddenBackgroundImage}
-					scrollYProgress={scrollYProgress}
-				/>
-				<Section2
-					image={hiddenBackgroundImage}
-					scrollYProgress={scrollYProgress}
-				/>
-			</div>
 			<div className={styles.main}>
 				<Paragraph
 					content={paragraph}
+					offsetStart={0.7}
+					offsetFinish={0.25}
 					fadeIn={displayAnimation}
 					tailwindStyling={paragraph ? styles.body : "hidden"}
 				/>
 				<div
-					className={styles.mask}
 					style={maskStyle}
+					className={styles.mask}
 					onMouseEnter={() => {
 						setIsHovered(true);
 					}}
@@ -73,6 +56,8 @@ const MaskCursorEffectDescription: FC<IMaskCursorEffectDescription> = ({
 					}}
 				>
 					<Paragraph
+						offsetStart={0.7}
+						offsetFinish={0.25}
 						fadeIn={displayAnimation}
 						content={hiddenParagraph}
 						tailwindStyling={hiddenParagraph ? styles.body : "hidden"}

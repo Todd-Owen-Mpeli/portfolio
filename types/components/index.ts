@@ -52,6 +52,8 @@ export type ITitle = {
 export type IParagraph = {
 	fadeIn: boolean;
 	content: string;
+	offsetStart: number;
+	offsetFinish: number;
 	tailwindStyling: string;
 };
 export type ITextDisperse = {
