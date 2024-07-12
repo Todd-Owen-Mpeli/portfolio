@@ -9,11 +9,16 @@ export type ITitleParagraph = {
 	displayParagraph: boolean;
 };
 export type IAboutExperience = {
-	heroTitle: string;
 	paragraph: string;
 	paragraphTwo: string;
 	displayAnimation: boolean;
-	heroImage: {
+};
+export type IStarProject = {
+	title: string;
+	paragraph: string;
+	paragraphTwo: string;
+	displayAnimation: boolean;
+	image: {
 		altText: string;
 		sourceUrl: string;
 		mediaDetails: {

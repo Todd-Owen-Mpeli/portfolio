@@ -19,14 +19,14 @@ export const getAllFlexibleContentComponents = async (
 								... on DefaultTemplate {
 									flexibleContent {
 										flexibleContent {
-											... on ${postTypeFlexibleContent}_AboutExperience {
+											... on ${postTypeFlexibleContent}_StarProject {
 												fieldGroupName
 												displaySection
-												heroTitle
+												title
 												paragraph
 												paragraphTwo
 												displayAnimation
-												heroImage {
+												image {
 													altText
 													sourceUrl
 													mediaDetails {
@@ -34,6 +34,13 @@ export const getAllFlexibleContentComponents = async (
 														width
 													}
 												}
+											}
+											... on ${postTypeFlexibleContent}_AboutExperience {
+												fieldGroupName
+												displaySection
+												paragraph
+												paragraphTwo
+												displayAnimation
 											}
 											... on ${postTypeFlexibleContent}_MaskCursorEffectDescription {
 												fieldGroupName

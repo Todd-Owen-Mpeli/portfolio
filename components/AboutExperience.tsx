@@ -1,9 +1,15 @@
 "use client";
 
 // Imports
+import {
+	offsetStart,
+	offsetFinish,
+	slideInRightInitial,
+	slideInRightFinish,
+} from "@/animations/animations";
 import {FC} from "react";
+import {motion} from "framer-motion";
 import {IAboutExperience} from "@/types/components";
-import {offsetFinish, offsetStart} from "@/animations/animations";
 
 // Styling
 import styles from "@/styles/components/AboutExperience.module.scss";
@@ -13,9 +19,7 @@ import Paragraph from "@/components/Elements/Paragraph";
 import ParagraphMaskAnimation from "@/components/Elements/ParagraphMaskAnimation";
 
 const AboutExperience: FC<IAboutExperience> = ({
-	heroTitle,
 	paragraph,
-	heroImage,
 	paragraphTwo,
 	displayAnimation,
 }) => {
@@ -36,7 +40,13 @@ const AboutExperience: FC<IAboutExperience> = ({
 							}
 						/>
 					</div>
-					<div className="w-full lg:w-1/2 xl:w-[35%]">
+					<motion.div
+						viewport={{once: false}}
+						initial={slideInRightInitial}
+						whileInView={slideInRightFinish}
+						className="w-full lg:w-1/2 xl:w-[35%]"
+					>
+						<h4 className="mb-4 text-xl text-left text-secondary-two">About</h4>
 						<Paragraph
 							content={paragraphTwo}
 							offsetStart={offsetStart}
@@ -48,7 +58,7 @@ const AboutExperience: FC<IAboutExperience> = ({
 									: "hidden"
 							}
 						/>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</div>

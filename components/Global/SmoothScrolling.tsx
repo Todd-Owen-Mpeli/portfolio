@@ -1,22 +1,16 @@
 "use client";
 
 // Imports
-import Lenis from "lenis";
-import {FC, useEffect} from "react";
+import {FC} from "react";
+import {ReactLenis} from "lenis/react";
 import {ISmoothScrolling} from "@/types/components";
 
 const SmoothScrolling: FC<ISmoothScrolling> = ({children}) => {
-	useEffect(() => {
-		const lenis = new Lenis();
-		function raf(time: number) {
-			lenis.raf(time);
-
-			requestAnimationFrame(raf);
-		}
-		requestAnimationFrame(raf);
-	}, []);
-
-	return <main>{children}</main>;
+	return (
+		<ReactLenis root options={{lerp: 0.01, duration: 3.5, syncTouch: true}}>
+			<main>{children}</main>
+		</ReactLenis>
+	);
 };
 
 export default SmoothScrolling;

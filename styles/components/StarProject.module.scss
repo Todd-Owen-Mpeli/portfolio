@@ -1,0 +1,22 @@
+@import "../base/fonts";
+@import "../base/colors";
+
+.container {
+	@apply relative h-[150vh];
+
+	.main {
+		@apply sticky overflow-hidden top-0 h-screen;
+
+		.el {
+			@apply absolute w-full h-full top-0 flex items-center justify-center;
+
+			.imageContainer {
+				@apply relative w-[50vw] h-[50vh];
+
+				img {
+					object-fit: cover;
+				}
+			}
+		}
+	}
+}

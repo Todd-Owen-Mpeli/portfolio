@@ -39,9 +39,9 @@ const MaskCursorEffectDescription: FC<IMaskCursorEffectDescription> = ({
 		<>
 			<div className={styles.main}>
 				<Paragraph
-					content={paragraph}
 					offsetStart={0.7}
 					offsetFinish={0.25}
+					content={paragraph}
 					fadeIn={displayAnimation}
 					tailwindStyling={paragraph ? styles.body : "hidden"}
 				/>
