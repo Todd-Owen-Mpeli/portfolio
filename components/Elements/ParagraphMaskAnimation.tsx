@@ -27,9 +27,11 @@ const ParagraphMaskAnimation: FC<IParagraph> = ({
 	tailwindStyling,
 }) => {
 	const body = useRef(null);
+	const phrasesContent = useRef(null);
 	const phrases = extractPhrases(content);
+	const isInView = useInView(phrasesContent, {once: false, margin: "-10%"});
 
-	const {scrollYProgress} = useScroll({
+	const {scrollYProgress}: any = useScroll({
 		target: body,
 		offset: ["start 0.9", "start 0.5"],
 	});
@@ -53,8 +55,9 @@ const ParagraphMaskAnimation: FC<IParagraph> = ({
 								custom={index}
 								className="py-0"
 								initial="initial"
+								ref={phrasesContent}
 								variants={animation}
-								animate={scrollYProgress ? "enter" : ""}
+								animate={isInView ? "enter" : ""}
 								style={{opacity: fadeIn ? scrollYProgress : 1}}
 							>
 								{phrase}
