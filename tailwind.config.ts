@@ -48,16 +48,16 @@ const config: Config = {
 
 				// Main colors
 				primary: {
-					default: "#222A68",
+					default: "#023436",
 					two: "#0b3142",
-					dark: "#1e255c",
-					darker: "#14193E",
+					dark: "#012627",
+					darker: "#011314",
 				},
 				accent: {
 					default: "#c0d6df",
 				},
 				secondary: {
-					default: "#574AE2",
+					default: "#037971",
 				},
 				tertiary: {
 					default: "#D1D646",
