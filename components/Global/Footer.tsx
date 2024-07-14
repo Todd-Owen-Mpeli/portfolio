@@ -5,10 +5,12 @@ import {
 	fadeIn,
 	initial,
 	stagger,
+	fadeInUp,
 	initialTwo,
-	arrayLoopStaggerChildren,
 	offsetStart,
+	initialThree,
 	offsetFinish,
+	arrayLoopStaggerChildren,
 } from "@/animations/animations";
 import Link from "next/link";
 import {FC, Fragment} from "react";
@@ -27,7 +29,7 @@ const Footer: FC = () => {
 
 	return (
 		<footer
-			className="relative h-full min-h-screen w-full m-0 pt-2 pb-4 bg-pureBlack font-FormulaCondensedBold"
+			className="relative h-full min-h-screen w-full m-0 pt-2 pb-4 bg-primary-darker font-FormulaCondensedBold"
 			style={{clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)"}}
 		>
 			<div className="fixed bottom-0 h-screen w-full flex flex-col justify-between">
@@ -82,7 +84,7 @@ const Footer: FC = () => {
 							offsetStart={offsetStart}
 							offsetFinish={offsetFinish}
 							content={globalContext?.themesOptionsContent?.copyrightText}
-							tailwindStyling="max-w-lg mx-auto lg:mx-0 text-black hover:text-darkGrey text-sm text-center lg:text-left tracking-wide uppercase transition-all ease-in-out duration-500"
+							tailwindStyling="max-w-lg mx-auto lg:mx-0 text-primary-default hover:text-secondary-default text-sm text-center lg:text-left tracking-wide uppercase transition-all ease-in-out duration-500"
 						/>
 						<Link
 							href={`${globalContext?.themesOptionsContent?.githubLink?.url}`}
@@ -103,7 +105,7 @@ const Footer: FC = () => {
 								width="512"
 								height="512"
 								fill="none"
-								className="w-4 h-4 object-center object-contain fill-darkGrey hover:fill-white  transition-all ease-in-out duration-500"
+								className="w-4 h-4 object-center object-contain fill-secondary-default hover:fill-white  transition-all ease-in-out duration-500"
 							>
 								<g>
 									<path d="M12,0.296c-6.627,0-12,5.372-12,12c0,5.302,3.438,9.8,8.206,11.387   c0.6,0.111,0.82-0.26,0.82-0.577c0-0.286-0.011-1.231-0.016-2.234c-3.338,0.726-4.043-1.416-4.043-1.416   C4.421,18.069,3.635,17.7,3.635,17.7c-1.089-0.745,0.082-0.729,0.082-0.729c1.205,0.085,1.839,1.237,1.839,1.237   c1.07,1.834,2.807,1.304,3.492,0.997C9.156,18.429,9.467,17.9,9.81,17.6c-2.665-0.303-5.467-1.332-5.467-5.93   c0-1.31,0.469-2.381,1.237-3.221C5.455,8.146,5.044,6.926,5.696,5.273c0,0,1.008-0.322,3.301,1.23   C9.954,6.237,10.98,6.104,12,6.099c1.02,0.005,2.047,0.138,3.006,0.404c2.29-1.553,3.297-1.23,3.297-1.23   c0.653,1.653,0.242,2.873,0.118,3.176c0.769,0.84,1.235,1.911,1.235,3.221c0,4.609-2.807,5.624-5.479,5.921   c0.43,0.372,0.814,1.103,0.814,2.222c0,1.606-0.014,2.898-0.014,3.293c0,0.319,0.216,0.694,0.824,0.576   c4.766-1.589,8.2-6.085,8.2-11.385C24,5.669,18.627,0.296,12,0.296z" />
@@ -125,11 +127,7 @@ const Footer: FC = () => {
 						viewport={{once: true}}
 						className="flex flex-col sm:flex-row -m-6 w-auto gap-2 sm:gap-6 p-6"
 					>
-						<motion.li
-							initial={initialTwo}
-							whileInView={fadeIn}
-							viewport={{once: true}}
-						>
+						<motion.li>
 							<Link
 								aria-label="Download CV Button"
 								href={`${globalContext?.themesOptionsContent?.resumeDownload?.url}`}
@@ -139,7 +137,7 @@ const Footer: FC = () => {
 												?.target
 										: "_self"
 								}`}
-								className="text-secondary-default hover:text-white text-sm text-center lg:text-left tracking-widest uppercase transition-all ease-in-out duration-500"
+								className="text-tertiary-default hover:text-secondary-default text-sm text-center lg:text-left tracking-widest uppercase transition-all ease-in-out duration-500"
 							>
 								→{globalContext?.themesOptionsContent?.resumeDownload?.title}
 							</Link>
@@ -156,11 +154,11 @@ const Footer: FC = () => {
 									>
 										<Link
 											href={`${item?.node?.url}`}
+											aria-label={`${item?.node?.label}`}
 											target={`${
 												item?.node?.target ? item?.node?.target : "_self"
 											}`}
-											aria-label={`${item?.node?.label}`}
-											className="text-black hover:text-darkGrey text-sm text-center lg:text-left tracking-wide uppercase transition-all ease-in-out duration-500"
+											className="text-primary-default hover:text-accent-default text-sm text-center lg:text-left tracking-wide uppercase transition-all ease-in-out duration-500"
 										>
 											{item?.node?.label}
 										</Link>

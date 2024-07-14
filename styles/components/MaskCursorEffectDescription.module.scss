@@ -2,18 +2,19 @@
 @import "../base/colors";
 
 .main {
-	@apply h-screen bg-white flex items-center justify-center relative;
+	@apply h-screen flex items-center justify-center relative;
 
 	.mask,
 	.body {
 		@apply cursor-default h-full w-full flex items-center justify-center absolute;
 
 		p {
-			@apply max-w-7xl w-full p-[40px] text-[40px] 2xl:text-[84px] text-black leading-[3.5rem] 2xl:leading-[6.5rem] text-left;
 			font-family: $main;
+			@apply max-w-7xl w-full p-[40px] text-[40px] 2xl:text-[84px] text-accent-default leading-[3.5rem] 2xl:leading-[6.5rem] text-left;
 
+			a,
 			span {
-				@apply text-primary-default;
+				@apply text-secondary-default;
 			}
 		}
 	}
@@ -27,8 +28,9 @@
 		p {
 			@apply text-white;
 
+			a,
 			span {
-				@apply text-secondary-default underline;
+				@apply text-tertiary-default underline;
 			}
 		}
 	}

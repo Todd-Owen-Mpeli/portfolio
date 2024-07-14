@@ -29,14 +29,14 @@
 			}
 
 			a {
-				@apply font-semibold underline text-primary-two hover:text-secondary-two transition-all ease-in-out duration-500;
+				@apply font-semibold underline text-primary-two hover:text-accent-default transition-all ease-in-out duration-500;
 			}
 		}
 	}
 
 	p {
 		a {
-			@apply font-semibold underline text-primary-two hover:text-secondary-two transition-all ease-in-out duration-500;
+			@apply font-semibold underline text-primary-two hover:text-accent-default transition-all ease-in-out duration-500;
 		}
 
 		img {

@@ -4,6 +4,7 @@
 import Image from "next/image";
 import {FC, useRef} from "react";
 import {IStarProject} from "@/types/components";
+import {fadeInUp, initialThree} from "@/animations/animations";
 import {motion, useScroll, useTransform} from "framer-motion";
 
 // Styling
@@ -20,6 +21,7 @@ const StarProject: FC<IStarProject> = ({
 	displayAnimation,
 }) => {
 	const container = useRef(null);
+
 	const {scrollYProgress} = useScroll({
 		target: container,
 		offset: ["start start", "end end"],
@@ -29,13 +31,18 @@ const StarProject: FC<IStarProject> = ({
 	return (
 		<>
 			<div ref={container} className={styles.container}>
-				<h4 className="w-full text-center text-[20vw] lg:leading-[25rem] py-0 font-FormulaCondensedBold uppercase text-white">
+				<motion.h4
+					initial={initialThree}
+					whileInView={fadeInUp}
+					viewport={{once: false}}
+					className="w-full text-center text-[22vw] lg:leading-[25rem] py-0 font-FormulaCondensedBold uppercase text-accent-default"
+				>
 					{title}
-				</h4>
+				</motion.h4>
 				<div className={styles.main}>
 					<motion.div style={{scale}} className={styles.el}>
 						<div className={styles.imageContainer}>
-							<div className="bg-white h-full w-full">
+							<div className="bg-secondary-default h-full w-full m-0">
 								{/* <Image
 									alt={image?.altText}
 									src={image?.sourceUrl}
@@ -55,6 +62,7 @@ const StarProject: FC<IStarProject> = ({
 					</motion.div>
 				</div>
 			</div>
+			{/* <div className="h-screen bg-secondary-default"></div> */}
 		</>
 	);
 };

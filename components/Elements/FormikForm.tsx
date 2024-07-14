@@ -215,7 +215,7 @@ const FormikForm: FC = () => {
 								onBlur={formik?.handleBlur}
 								onChange={formik?.handleChange}
 								value={formik?.values?.firstName}
-								className="px-4 py-3 w-full text-darkGrey placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-green-darker focus:border-green-darker focus:ring-[1px] focus:ring-green-darker"
+								className="px-4 py-3 w-full text-secondary-default placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-green-darker focus:border-green-darker focus:ring-[1px] focus:ring-green-darker"
 							/>
 						</motion.div>
 						<motion.div
@@ -238,7 +238,7 @@ const FormikForm: FC = () => {
 								onBlur={formik?.handleBlur}
 								onChange={formik?.handleChange}
 								value={formik?.values?.lastName}
-								className="px-4 py-3 w-full text-darkGrey placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-green-darker focus:border-green-darker focus:ring-[1px] focus:ring-green-darker"
+								className="px-4 py-3 w-full text-secondary-default placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-green-darker focus:border-green-darker focus:ring-[1px] focus:ring-green-darker"
 							/>
 						</motion.div>
 					</div>
@@ -264,7 +264,7 @@ const FormikForm: FC = () => {
 								onBlur={formik?.handleBlur}
 								onChange={formik?.handleChange}
 								value={formik?.values?.phoneNumber}
-								className="px-4 py-3 w-full text-darkGrey placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-green-darker focus:border-green-darker focus:ring-[1px] focus:ring-green-darker"
+								className="px-4 py-3 w-full text-secondary-default placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-green-darker focus:border-green-darker focus:ring-[1px] focus:ring-green-darker"
 							/>
 						</motion.div>
 						<motion.div
@@ -288,7 +288,7 @@ const FormikForm: FC = () => {
 								onBlur={formik?.handleBlur}
 								onChange={formik?.handleChange}
 								value={formik?.values?.subject}
-								className="px-4 py-3 w-full text-darkGrey placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-green-darker focus:border-green-darker focus:ring-[1px] focus:ring-green-darker"
+								className="px-4 py-3 w-full text-secondary-default placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-green-darker focus:border-green-darker focus:ring-[1px] focus:ring-green-darker"
 							/>
 						</motion.div>
 					</div>
@@ -313,7 +313,7 @@ const FormikForm: FC = () => {
 							onBlur={formik?.handleBlur}
 							onChange={formik?.handleChange}
 							value={formik?.values?.email}
-							className="px-4 py-3 w-full text-darkGrey placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-green-darker focus:border-green-darker focus:ring-[1px] focus:ring-green-darker"
+							className="px-4 py-3 w-full text-secondary-default placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-green-darker focus:border-green-darker focus:ring-[1px] focus:ring-green-darker"
 						/>
 					</motion.div>
 					<motion.div
@@ -336,7 +336,7 @@ const FormikForm: FC = () => {
 							onBlur={formik?.handleBlur}
 							onChange={formik?.handleChange}
 							value={formik?.values?.message}
-							className="p-4 w-full h-48  text-darkGrey placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-green-darker focus:border-green-darker resize-none focus:ring-[1px] focus:ring-green-darker"
+							className="p-4 w-full h-48  text-secondary-default placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-green-darker focus:border-green-darker resize-none focus:ring-[1px] focus:ring-green-darker"
 						/>
 					</motion.div>
 					<motion.div

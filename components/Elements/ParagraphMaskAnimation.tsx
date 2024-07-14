@@ -41,7 +41,7 @@ const ParagraphMaskAnimation: FC<IParagraph> = ({
 
 		enter: (i: number) => ({
 			y: "0",
-			transition: {duration: 0.75, ease: [0.33, 1, 0.68, 1], delay: 0.075 * i},
+			transition: {duration: 1.75, ease: [0.33, 1, 0.68, 1], delay: 0.1 * i},
 		}),
 	};
 

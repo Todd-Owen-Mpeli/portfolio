@@ -2,4 +2,5 @@
 @import "../base/colors";
 
 .description {
+	@apply bg-center bg-no-repeat bg-cover;
 }

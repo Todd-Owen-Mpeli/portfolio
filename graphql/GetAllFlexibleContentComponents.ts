@@ -41,6 +41,11 @@ export const getAllFlexibleContentComponents = async (
 												paragraph
 												paragraphTwo
 												displayAnimation
+												buttonLink {
+            										url
+            										title
+            										target
+            									}
 											}
 											... on ${postTypeFlexibleContent}_MaskCursorEffectDescription {
 												fieldGroupName

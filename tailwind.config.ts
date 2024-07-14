@@ -48,33 +48,19 @@ const config: Config = {
 
 				// Main colors
 				primary: {
-					default: "#2563eb",
-					two: "#3978ff",
-					light: "#3d77f3",
-					dark: "#09275e",
-					darker: "#0d172a",
-					darkerTwo: "#061229",
-				},
-				secondary: {
-					default: "#f6ad37",
-					two: "#e8b042",
-					three: "#fac546",
-					light: "#fbbc57",
-					dark: "#e4a002",
-					darker: "#bc7700",
+					default: "#023436",
+					two: "#0b3142",
+					dark: "#012627",
+					darker: "#011314",
 				},
 				accent: {
-					default: "#86bc08",
-					two: "#74ae00",
-					three: "#e39e34",
-					dark: "#57a300",
-					darkTwo: "#376b13",
+					default: "#c0d6df",
+				},
+				secondary: {
+					default: "#037971",
 				},
 				tertiary: {
-					default: "#833df4",
-					two: "#7736f1",
-					three: "#622bc7",
-					dark: "#2d2378",
+					default: "#D1D646",
 				},
 			},
 		},

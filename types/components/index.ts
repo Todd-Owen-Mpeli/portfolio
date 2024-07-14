@@ -9,6 +9,11 @@ export type ITitleParagraph = {
 	displayParagraph: boolean;
 };
 export type IAboutExperience = {
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
 	paragraph: string;
 	paragraphTwo: string;
 	displayAnimation: boolean;

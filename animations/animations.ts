@@ -27,6 +27,10 @@ export const initial: Initial | any = {
 export const initialTwo: InitialTwo | any = {
 	opacity: 0,
 };
+export const initialThree: Initial | any = {
+	y: 90,
+	opacity: 0,
+};
 export const fadeIn: FadeIn | any = {
 	opacity: 1,
 	transition: {
@@ -49,7 +53,7 @@ export const fadeInUp: FadeInUp = {
 	opacity: 1,
 	transition: {
 		delay: 0.5,
-		duration: 0.75,
+		duration: 0.5,
 		ease: "easeInOut",
 	},
 };

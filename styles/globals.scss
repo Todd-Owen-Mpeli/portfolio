@@ -7,11 +7,8 @@
 
 html,
 body {
-	padding: 0;
-	margin: 0;
-	// overflow-x: hidden;
-	background: $pureBlack;
-	// scroll-behavior: smooth;
+	@apply p-0 m-0 bg-primary-default;
+
 	font-family: -apple-system, $body, BlinkMacSystemFont, Segoe UI, Roboto,
 		Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -27,12 +24,12 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-	background: $blue;
+	background: $primary-default;
 	border-radius: 100px;
 
 	&:hover {
 		transition: all 0.5s;
-		background-color: $lightBlue;
+		background-color: $primary-default;
 	}
 }
 
@@ -89,7 +86,7 @@ h2 {
 	height: 15px !important;
 	font-size: 15px !important;
 	font-weight: 900 !important;
-	color: $darkBlue !important;
+	color: $primary-dark !important;
 }
 
 .swiper-button-next::after {
@@ -98,5 +95,5 @@ h2 {
 	height: 15px !important;
 	font-size: 15px !important;
 	font-weight: 900 !important;
-	color: $darkBlue !important;
+	color: $primary-dark !important;
 }

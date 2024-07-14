@@ -7,14 +7,14 @@ footer {
 		@apply w-[75vw] mx-auto p-0;
 
 		.introLine {
-			@apply flex text-[8vw] justify-between uppercase text-white;
+			@apply flex text-[8vw] justify-between uppercase text-accent-default;
 
 			p {
 				@apply m-0;
 			}
 
 			span {
-				@apply text-[8vw] uppercase text-white;
+				@apply text-[8vw] uppercase text-accent-default;
 			}
 		}
 
@@ -31,7 +31,7 @@ footer {
 			@extend .introLine;
 
 			span:hover {
-				@apply text-primary-default;
+				@apply text-tertiary-default;
 			}
 		}
 	}
